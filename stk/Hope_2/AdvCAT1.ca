@@ -1,0 +1,915 @@
+stk.v.11.0
+WrittenBy    STK_v11.2.0
+
+BEGIN AdvCAT
+
+Name        AdvCAT1
+
+    BEGIN Interval
+
+        StartTime                 10 Jul 2026 06:30:00.000000000
+        StopTime                  11 Jul 2026 06:30:00.000000000
+        AnalysisWindowPtr
+	BEGIN	EVENTINTERVAL
+			EventInterval
+				BEGIN	EVENTINTERVAL
+					Type	EVENTINTERVAL_LINKTO
+					Name	AnalysisInterval
+					AbsolutePath	Scenario
+				END	EVENTINTERVAL
+			IntervalState	Implicit
+	END	EVENTINTERVAL
+
+        DisplayComputeAck         No
+        MsgAlertOnHit             No
+        ForceRePropOnSatFileLoad  No
+        AllowPartialEphemeris     No
+        RemoveSecondaryBySSC      Yes
+        MinSampleStepSize         1.000000000000e+00
+        MaxSampleStepSize         3.000000000000e+02
+        ComputeOnLoad  No
+
+    END Interval
+
+
+    BEGIN FilterSettings
+
+        Threshold                 1.000000000000e+04
+        ApogeePerigeePad          3.000000000000e+04
+        OrbitPathPad              1.000000000000e+05
+        TimeDistancePad           3.000000000000e+04
+        OutOfDateDuration         2.592000000000e+06
+        UseOutOfDateFilter        No
+        UseApogeePerigeeFilter    Yes
+        UsePathFilter             No
+        UseTimeFilter             Yes
+
+    END FilterSettings
+
+    BEGIN ProbabilityData
+
+         Resolution             	 1.000000000000e-01
+         AngleLimit             	 1.000000000000e+00
+         SigmaLimit             	 2.500000000000e-01
+         SigmaFinal             	 4.000000000000e+00
+         FractionalProbLimit    	 5.000000000000e-02
+         MaxTimeStep            	 1.000000000000e+01
+         HalfTimeSpan           	 0.000000000000e+00
+
+    END ProbabilityData
+
+
+    BEGIN GlobalEllipsoidProperties
+
+         ScaleFactor            	 1.000000000000e+00
+         QuadraticDB            	 stkQuadDB.qdb
+         FixedByOrbitClassDB    	 stkFxdOrbCls.foc
+         QuadraticByOrbitClassDB	 stkQuadOrbCls.qoc
+         CrossReferenceDB       	 stkAllTLE.sd
+        UseCrossRefDb             No
+
+    END GlobalEllipsoidProperties
+
+    BEGIN LogFileSettings
+
+        OutputToLogFile             No
+        BufferOutput                Yes
+        FileMode                    Overwrite
+
+    END LogFileSettings
+
+
+    BEGIN RelationFile
+
+        RelationFileName       commonRelatedObjects.rel
+        UseRelFile             No
+
+    END RelationFile
+
+    BEGIN SSCHardBodyRadFile
+
+        UseSSCFile         No
+
+    END SSCHardBodyRadFile
+
+    BEGIN Primaries
+
+
+        BEGIN DefaultEllipsoid
+
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+
+        END DefaultEllipsoid
+
+
+        BEGIN ScenarioObject
+             Name                  Satellite/YOUTHSAT_37388
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/WEOS_27599
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/TIGRISAT_40043
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/THEOS_33396
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/TELEOS_1_41169
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/SWAYAM_41607
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/SRMSAT_37841
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/SCATSAT_1_41790
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/SARAL_39086
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/RISAT-2_34807
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/RISAT-1_38248
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/QSAT-EOS_40301
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/NEOSSAT_39089
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/KAZEOSAT_2_40010
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/JUGNU_37839
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/GEOSAT_15595
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/GEOS_2_03093
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/GEODETIC_EARTH_07734
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/FAISAT_2V_24954
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/FAISAT_23465
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/DZZ-HR_39731
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/DUBAISAT-2_39419
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/DUBAISAT-1_35682
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/CARTOSAT-2D_41948
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/CARTOSAT-2C_41599
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/CARTOSAT-2B_36795
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/CARTOSAT-2A_32783
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/CARTOSAT-2_29710
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/CARTOSAT-1_28649
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/ASTROSAT_40930
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/AISAT_40054
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/ADEOS_24277
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+        BEGIN ScenarioObject
+             Name                  Satellite/ADEOS-II_27597
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END ScenarioObject
+
+    END Primaries
+
+    BEGIN Secondaries
+
+
+        BEGIN DefaultEllipsoid
+
+             Tangential            1.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                1.000000000000e+04
+             EllipsoidType         Fixed
+
+        END DefaultEllipsoid
+
+
+        BEGIN TleFile
+             Name                  stkSatDbAll.tce
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END TleFile
+
+        BEGIN TleFile
+             Name                  stkSatDb.tce
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END TleFile
+
+        BEGIN TleFile
+             Name                  stkAllTLE.tce
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END TleFile
+
+        BEGIN TleFile
+             Name                  stkAllComm.tce
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END TleFile
+
+        BEGIN Satellite
+             Name                  YOUTHSAT_37388.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  WEOS_27599.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  TIGRISAT_40043.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  THEOS_33396.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  TELEOS_1_41169.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  SWAYAM_41607.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  SRMSAT_37841.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  SCATSAT_1_41790.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  SARAL_39086.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  RISAT-2_34807.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  RISAT-1_38248.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  QSAT-EOS_40301.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  NEOSSAT_39089.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  KAZEOSAT_2_40010.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  JUGNU_37839.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  GEOSAT_15595.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  GEOS_2_03093.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  GEODETIC_EARTH_07734.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  FAISAT_2V_24954.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  FAISAT_23465.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  DZZ-HR_39731.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  DUBAISAT-2_39419.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  DUBAISAT-1_35682.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  CARTOSAT-2D_41948.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  CARTOSAT-2C_41599.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  CARTOSAT-2B_36795.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  CARTOSAT-2A_32783.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  CARTOSAT-2_29710.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  CARTOSAT-1_28649.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  ASTROSAT_40930.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  AISAT_40054.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  ADEOS_24277.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+        BEGIN Satellite
+             Name                  ADEOS-II_27597.sa
+             Tangential            2.000000000000e+04
+             CrossTrack            1.000000000000e+04
+             Normal                5.000000000000e+03
+             EllipsoidType         Fixed
+             HardBodyRadius        1.00000
+             NumberID              0
+
+        END Satellite
+
+    END Secondaries
+
+BEGIN Extensions
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN Desc
+    Begin ShortText
+
+    End ShortText
+    Begin LongText
+
+    End LongText
+    END Desc
+    
+    BEGIN VO
+    END VO
+
+END Extensions
+
+END AdvCAT
+
