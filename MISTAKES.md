@@ -3,7 +3,7 @@
 *[← Conjunction screening for a LEO digital twin](README.md)*
 
 These are mine, from the July 2026 screening, apart from the last two, which are
-in our team report and which I share. I found most of them while building this
+in our [team report](report/README.md) and which I share. I found most of them while building this
 repository, by checking STK's output with open-source code. Each one ends with the
 check that would have caught it.
 

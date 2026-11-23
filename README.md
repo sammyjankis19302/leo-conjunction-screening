@@ -58,6 +58,8 @@ conjunction screening. <a href="media/stk-youthsat-conjunction.mp4">Full recordi
   open-source SGP4 matches STK, and what an element set's age costs.
 - **[Debris clouds](theory/03-debris-clouds.md)**: how one collision becomes a shell
   of debris around the Earth.
+- **[The project report](report/README.md)**: our team report as submitted (June
+  2026), and what this repository corrects in it.
 - **[MISTAKES.md](MISTAKES.md)**: what went wrong, and what each mistake taught me.
 - **[RESOURCES.md](RESOURCES.md)**: papers, data sources and software.
 
@@ -289,6 +291,7 @@ leo-conjunction-screening/
 ├── data/results/           the outputs of the analysis scripts
 ├── figures/                generated figures and STK screenshots
 ├── media/                  the STK recordings and the team photo
+├── report/                 the team's project report, as submitted
 └── theory/                 three notes on the physics
 ```
 
@@ -323,7 +326,7 @@ Guided by **Dr. Rachana S Akki**, Associate Professor.
 | March 2026 | Synopsis: *Energy-Aware Digital Twin of LEO Satellite Constellations Using Scalable N-Body Simulation* |
 | 23 April – 8 May 2026 | First STK scenario: five objects, ISS ephemeris, access and AER reports |
 | 7–8 May 2026 | SWISSCUBE screened against STK's full catalogue |
-| June 2026 | Project report; the software side's repository |
+| June 2026 | [Project report](report/README.md); the software side's repository |
 | 10 July 2026 | Final scenario: 33 satellites screened with AdvCAT; the report exported for the software side |
 | November 2026 | This repository: the open-source re-creation, the 2017 element sets found, the screening redone |
 
